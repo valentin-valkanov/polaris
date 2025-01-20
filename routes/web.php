@@ -6,10 +6,10 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('positions', function (){
+Route::get('/positions', function (){
     return view('positions');
 });
 
-Route::get('stats', function (){
+Route::get('/stats', function (){
     return view('stats');
 });
