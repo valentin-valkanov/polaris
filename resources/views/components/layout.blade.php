@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Polaris</title>
+    @vite(['resources/css/table.css'])
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-full">
@@ -22,6 +23,7 @@
                             <x-nav-link href="/" :active="request()->is('/')">Dashboard</x-nav-link>
                             <x-nav-link href="/positions" :active="request()->is('positions')">Positions</x-nav-link>
                             <x-nav-link href="/stats" :active="request()->is('stats')">Statistics</x-nav-link>
+                            <x-nav-link href="/sizing" :active="request()->is('sizing')">Position Sizing</x-nav-link>
                         </div>
                     </div>
                 </div>
