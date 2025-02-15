@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PositionStateRequest;
 use App\Models\Position;
 use App\Models\PositionState;
 use Illuminate\Http\RedirectResponse;
@@ -24,7 +25,7 @@ class PositionController extends Controller
         return view('position-add', compact('action'));
     }
 
-    public function storePosition(Request $request): RedirectResponse
+    public function storePosition(PositionStateRequest $request): RedirectResponse
     {
         PositionState::create($request->validated());
 
