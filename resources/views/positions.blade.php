@@ -3,6 +3,12 @@
         Positions
     </x-slot:heading>
 
+    {{-- Add Position Button --}}
+    <div class="mb-4 flex justify-end">
+        <x-button href="{{ route('position.add') }}">
+            + Add Position
+        </x-button>
+    </div>
 
     <div class="table-container">
         <table class="table">

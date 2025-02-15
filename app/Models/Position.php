@@ -19,4 +19,13 @@ class Position extends Model
     {
         return $this->hasMany(PositionState::class);
     }
+
+    public function addPositionState(PositionState $positionState): self
+    {
+        if (!$this->positionStates->contains($positionState)) {
+            $this->positionStates()->save($positionState);
+        }
+
+        return $this;
+    }
 }
